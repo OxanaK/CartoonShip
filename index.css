@@ -1,0 +1,347 @@
+﻿.sea 
+ {
+   
+      position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    opacity: .8;
+    background: #2a94d6;
+ }
+
+
+.sea::after
+ {
+    position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 10px;
+      content: '';
+      background: #1d7fbb;
+}
+          
+.ship::after 
+ {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    content: '';
+    border-radius: 0 0 0 20px;
+    background: #e25c45;
+ }
+
+.ship::before 
+ {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 65px;
+    height: 16px;
+    content: '';
+    border-radius: 20px 0 0 0;
+    background: #fff;
+}
+
+.ship 
+ {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+    width: 100px;
+    height: 36px;
+    right: -50%;
+    transition: right 5s cubic-bezier(0, 0, 1, 1);
+    animation:moveShip 30s infinite linear;
+ }
+
+.ship_smokestack 
+ {
+      position: absolute;
+      bottom: 36px;
+      left: 45px;
+      width: 10px;
+      height: 17px;  
+      background: #a18e6e;
+ }
+
+
+.ship_window
+ {
+      position: absolute;
+      top: 6px;
+      left: 40px; 
+      width: 7px;
+      height: 7px;   
+      border-radius: 50%; 
+      background: #a18e6e; 
+      box-shadow: 13px 0 0 0 #a18e6e, -13px 0 0 0 #a18e6e;   
+ }
+@keyframes moveShip
+ {     
+     to{
+      right:100%;
+     }
+ }
+.smoke div
+ {
+      position: absolute; 
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fff;
+ }
+
+.smoke-1
+ {
+      top: -25px;
+      right: 44px;
+      transform:scale( .8);
+      opacity:0;
+      animation: movesmoke1 4s infinite;
+      animation-delay: 2s;
+      
+ }
+.smoke-2 
+ {
+       top: -25px;
+       right: 42px;
+       transform:scale( .7);
+       opacity:0;
+       animation: movesmoke2 4s infinite;
+       animation-delay:0.8s;
+  } 
+.smoke-3
+ {    
+      top: -25px;
+      opacity:0;
+      right: 49px;
+      transform:scale( .5);
+      animation: movesmoke3 4s infinite;
+     
+ }
+@keyframes movesmoke3 { 
+from{
+     opacity: 1;
+}
+to{
+    transform: translateY(-30px) scale(2) ;
+    opacity: 0;
+  }
+ }
+@keyframes movesmoke2 { 
+from{
+     opacity: 1;
+}
+to{  
+    transform:  translateY(-30px) scale(2.5) ;
+     opacity: 0;
+  }
+ }
+@keyframes movesmoke1 { 
+from{
+     opacity: 1;
+}
+to{
+   transform: translateY(-40px) scale(3) ;
+    opacity: 0;
+  }
+ }
+ /*clouds*/
+.cloud 
+ {
+      position: absolute;
+      left: -180px;
+      width: 200px;
+      height: 60px;
+      opacity: .8;
+      border-radius: 200px;
+      background: #fff;
+}
+
+
+.cloud:before,
+.cloud:after
+ {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      width: 100px;
+      height: 80px;
+      content: '';
+      border-radius: 100px;
+      background: #fff;  
+ }
+
+
+.cloud:after 
+ {
+     top: -55px;
+     right: 15px;
+     left: auto;
+     width: 120px;
+     height: 120px;
+ }
+
+
+@keyframes move
+{ to{
+      left:100%;
+      transition: linear;    
+    }   
+}
+
+.canvas
+ {
+    position: relative; 
+    width: 500px;
+    height: 380px;
+    margin: 80px 0 0 0;
+    transition: .3s ease;
+    perspective: 800px;
+ }
+
+
+
+.box_front 
+ {
+    position: relative; 
+    overflow: hidden;
+    width: 500px;
+    height: 380px;
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+    animation:moveDay  60s infinite ;
+ }
+ @keyframes moveDay {
+      0%{
+            background: darkslateblue;
+       }
+      35%
+            {   /*day:*/
+               background: skyblue;
+               box-shadow: 0 -400px 300px -300px steelblue inset;
+            }
+   50% 
+           {
+                /*evening:*/
+                background: darkslateblue;
+                box-shadow: 0 -400px 300px -300px orangered inset;
+            }  
+     90%
+            {
+                  /*night:*/
+                background: darkslateblue;
+                box-shadow: 0 -400px 300px -300px transparent inset;
+            }
+      100%{
+                background: darkslateblue;
+         }
+  } 
+.cloud-1 {
+    top: 10px;
+    left:-200px;
+    transform:scale(0.3) rotateY(180deg);
+    animation:move 100s infinite; 
+}
+.cloud-2 {
+    top: 50px;
+    left:-200px;
+    transform:scale(0.4);
+    animation:move 50s infinite;    
+}
+.cloud-3 {
+    top: 100px;
+    left:-200px;
+    transform:scale(0.5) rotateY(180deg);
+    animation:move 35s infinite;
+  }
+.cloud-4 {
+    top: 170px;
+    left:-200px;
+    transform:scale(0.7);
+    animation:move 25s infinite;
+  }
+
+
+ 
+ @keyframes moveSun {
+     from{
+         transform: rotate(-90deg);
+     }
+     to{
+         transform: rotate(270deg);
+     }  
+}
+
+.sun {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffcf11;
+    box-shadow: 0 0 100px #ffdf05;
+    animation: moveSun 20s linear infinite backwards;
+}
+
+
+.sun-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom center;
+    animation: moveSun 60s linear infinite backwards;
+  }
+
+
+
+.sun div {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    margin-left: -1px;  
+    border: solid #ffcf11;
+    border-width: 10px 0 10px 0;
+}
+.sun div:nth-child(2) {
+    transform: rotate(18deg);
+}
+
+.sun div:nth-child(3) {
+    transform: rotate(36deg);
+}
+
+.sun div:nth-child(4) {
+    transform: rotate(54deg);
+}
+
+.sun div:nth-child(5) {
+    transform: rotate(72deg);
+}
+
+.sun div:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.sun div:nth-child(7) {
+    transform: rotate(-18deg);
+}
+
+.sun div:nth-child(8) {
+    transform: rotate(-36deg);
+}
+
+.sun div:nth-child(9) {
+    transform: rotate(-54deg);
+}
+
+.sun div:nth-child(10) {
+    transform: rotate(-72deg);
+}
