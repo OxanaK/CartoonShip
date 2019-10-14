@@ -1,2 +1,2 @@
-# CartunShip
+# CartoonShip
 HTML, CSS
