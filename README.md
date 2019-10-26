@@ -8,9 +8,12 @@ HTML, CSS
 
 ## Images: 
 
-![alt text](https://github.com/OxanaK/VegetableMarket/blob/master/example_photos/veget1.jpg)
 
-![alt text](https://github.com/OxanaK/VegetableMarket/blob/master/example_photos/veget2.jpg)
+![alt text](https://github.com/OxanaK/CartoonShip/blob/master/example_photos/ship2.jpg)
 
-![alt text](https://github.com/OxanaK/VegetableMarket/blob/master/example_photos/veget3.jpg)
+![alt text](https://github.com/OxanaK/CartoonShip/blob/master/example_photos/ship4.jpg)
+
+![alt text](https://github.com/OxanaK/CartoonShip/blob/master/example_photos/ship3.jpg)
+
+![alt text](https://github.com/OxanaK/CartoonShip/blob/master/example_photos/ship1.jpg)
 
